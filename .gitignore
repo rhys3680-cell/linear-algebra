@@ -10,3 +10,4 @@ wheels/
 .venv
 .ipynb_checkpoints
 .ruff_cache
+.virtual_documents
