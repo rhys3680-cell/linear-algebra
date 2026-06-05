@@ -13,5 +13,20 @@ dependencies = [
 [dependency-groups]
 dev = [
     "jupyterlab>=4.5.7",
+    "jupyterlab-code-formatter>=3.0.3",
+    "jupyterlab-lsp>=5.3.0",
     "nbstripout>=0.9.1",
+    "python-lsp-ruff>=2.3.1",
+    "python-lsp-server>=1.14.0",
+    "ruff>=0.15.16",
 ]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+# E/W: pycodestyle, F: pyflakes, I: isort, UP: pyupgrade, B: bugbear
+select = ["E", "W", "F", "I", "UP", "B"]
+# 학습용 노트북에 흔한 경우는 완화
+# E402: import가 셀 중간에 오는 것 허용, F811: 셀마다 재정의 허용
+ignore = ["E402", "F811"]
